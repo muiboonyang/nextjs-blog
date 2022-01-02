@@ -178,9 +178,10 @@ function Layout({ children , home  }) {
 /***/ }),
 
 /***/ 8904:
-/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+/***/ ((module, __webpack_exports__, __webpack_require__) => {
 
 "use strict";
+__webpack_require__.a(module, async (__webpack_handle_async_dependencies__) => {
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   "ld": () => (/* binding */ getSortedPostsData),
 /* harmony export */   "Le": () => (/* binding */ getAllPostIds),
@@ -192,8 +193,10 @@ function Layout({ children , home  }) {
 /* harmony import */ var path__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(path__WEBPACK_IMPORTED_MODULE_1__);
 /* harmony import */ var gray_matter__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(8076);
 /* harmony import */ var gray_matter__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(gray_matter__WEBPACK_IMPORTED_MODULE_2__);
-Object(function webpackMissingModule() { var e = new Error("Cannot find module 'remark'"); e.code = 'MODULE_NOT_FOUND'; throw e; }());
-Object(function webpackMissingModule() { var e = new Error("Cannot find module 'remark-html'"); e.code = 'MODULE_NOT_FOUND'; throw e; }());
+/* harmony import */ var remark__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(1774);
+/* harmony import */ var remark_html__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(7740);
+var __webpack_async_dependencies__ = __webpack_handle_async_dependencies__([remark_html__WEBPACK_IMPORTED_MODULE_4__, remark__WEBPACK_IMPORTED_MODULE_3__]);
+([remark_html__WEBPACK_IMPORTED_MODULE_4__, remark__WEBPACK_IMPORTED_MODULE_3__] = __webpack_async_dependencies__.then ? await __webpack_async_dependencies__ : __webpack_async_dependencies__);
 
 
 
@@ -257,7 +260,7 @@ async function getPostData(id) {
     // Use gray-matter to parse the post metadata section
     const matterResult = gray_matter__WEBPACK_IMPORTED_MODULE_2___default()(fileContents);
     // Use remark to convert markdown into HTML string
-    const processedContent = await Object(function webpackMissingModule() { var e = new Error("Cannot find module 'remark'"); e.code = 'MODULE_NOT_FOUND'; throw e; }())().use(Object(function webpackMissingModule() { var e = new Error("Cannot find module 'remark-html'"); e.code = 'MODULE_NOT_FOUND'; throw e; }())).process(matterResult.content);
+    const processedContent = await (0,remark__WEBPACK_IMPORTED_MODULE_3__.remark)().use(remark_html__WEBPACK_IMPORTED_MODULE_4__["default"]).process(matterResult.content);
     const contentHtml = processedContent.toString();
     // Combine the data with the id
     return {
@@ -267,6 +270,7 @@ async function getPostData(id) {
     };
 }
 
+});
 
 /***/ })
 

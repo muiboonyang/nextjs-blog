@@ -6,8 +6,9 @@ exports.ids = [646];
 exports.modules = {
 
 /***/ 9955:
-/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+/***/ ((module, __webpack_exports__, __webpack_require__) => {
 
+__webpack_require__.a(module, async (__webpack_handle_async_dependencies__) => {
 __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   "getStaticProps": () => (/* binding */ getStaticProps),
@@ -23,6 +24,8 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _components_date__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(3858);
 /* harmony import */ var _styles_utils_module_css__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(1928);
 /* harmony import */ var _styles_utils_module_css__WEBPACK_IMPORTED_MODULE_5___default = /*#__PURE__*/__webpack_require__.n(_styles_utils_module_css__WEBPACK_IMPORTED_MODULE_5__);
+var __webpack_async_dependencies__ = __webpack_handle_async_dependencies__([_lib_posts__WEBPACK_IMPORTED_MODULE_2__]);
+_lib_posts__WEBPACK_IMPORTED_MODULE_2__ = (__webpack_async_dependencies__.then ? await __webpack_async_dependencies__ : __webpack_async_dependencies__)[0];
 
 
 
@@ -76,6 +79,7 @@ function Post({ postData  }) {
     }));
 };
 
+});
 
 /***/ }),
 
@@ -223,6 +227,20 @@ module.exports = require("react");
 /***/ ((module) => {
 
 module.exports = require("react/jsx-runtime");
+
+/***/ }),
+
+/***/ 1774:
+/***/ ((module) => {
+
+module.exports = import("remark");;
+
+/***/ }),
+
+/***/ 7740:
+/***/ ((module) => {
+
+module.exports = import("remark-html");;
 
 /***/ }),
 
